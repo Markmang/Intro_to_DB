@@ -6,6 +6,7 @@ mydb = mysql.connector.connect(
             database="alx_book_store"
 )
 mycursor = mydb.cursor()
+mycursor.execute("USE alx_book_store;")
 mycursor.execute("SHOW TABLES")
 for table in mycursor:
     print(table)
